@@ -15,10 +15,10 @@ __tcf_0: // переменная
 	.seh_endproc
 	.def	__main;	.scl	2;	.type	32;	.endef // переменная
 	.section .rdata,"dr"
-.LC0: \\ символьные константы
-	.ascii "NO\0" \\ массив символов
-.LC1: \\ символьные константы
-	.ascii "YES\0" \\ массив символов
+.LC0: // символьные константы
+	.ascii "NO\0" // массив символов
+.LC1: // символьные константы
+	.ascii "YES\0" // массив символов
 	.text
 	.globl	main
 	.def	main;	.scl	2;	.type	32;	.endef
@@ -80,7 +80,7 @@ main:
 	movl	%edx, 44(%rsp)
 	testl	%eax, %eax
 	je	.L3
-.L15: \\ начало цикла
+.L15: // начало цикла
 	leaq	36(%rsp), %rdx
 	movq	%r13, %rcx
 	call	_ZNSirsERi
@@ -90,7 +90,7 @@ main:
 	movl	$0, %esi
 	leaq	40(%rsp), %rbp
 	movq	.refptr._ZSt3cin(%rip), %rdi
-\\ конец цикла
+// конец цикла
 .L6: //  начала цикл
 	movq	%rbp, %rdx
 	movq	%rdi, %rcx
